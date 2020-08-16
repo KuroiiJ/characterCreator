@@ -31,13 +31,12 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style >
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 0 auto;
-    max-width: 700px;
-    border: 2px dashed rgba(114, 186, 94, 0.35);
-  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 auto;
+  max-width: 80%;
+  height: 700px;
   background: rgba(114, 186, 94, 0.05);
   overflow: scroll;
 }

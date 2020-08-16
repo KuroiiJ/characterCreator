@@ -1,11 +1,11 @@
 <template>
-  <div id="app">
+  <div id="app" v-show=races >
     <img alt="Maki" id="header-img" src="./assets/Maki1.jpg"><br/>
     <button v-on:click="toggle='character-viewer'; getCharacters()">View all Characters </button>
     <button v-on:click="toggle='character-creator'; getClasses(); getRaces()">Create New Character </button>
     
     <CharacterViewer v-show="toggle==='character-viewer'" :characters="characters"/>
-    <CharacterCreator v-show="toggle==='character-creator'" :classes="classes" :races="races" />
+    <CharacterCreator v-show="toggle==='character-creator'" :classes="classes.results" :races="races.results" />
   </div>
 </template>
 
@@ -47,7 +47,8 @@ export default {
   },
   mounted: function () {
     this.getCharacters(),
-    this.getClasses()
+    this.getClasses(),
+    this.getRaces()
   }
 }
 </script>
