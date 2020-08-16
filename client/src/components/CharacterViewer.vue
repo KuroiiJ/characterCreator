@@ -32,8 +32,13 @@ export default {
 <style lang="scss">
 
 .wrapper {
-  margin: 0 auto;
+  margin-top: 50px;
+  padding-top: 25px;
+  padding-bottom: 1000px;
   max-width: 700px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
   .card {
     position: sticky;
@@ -44,9 +49,9 @@ export default {
     background: #fff;
     font-family: Roboto;
     margin: 50px auto;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    transition: all 0.2s ease-in-out;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
   }
 
   @for $i from 1 through 80 {
