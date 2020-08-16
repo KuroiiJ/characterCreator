@@ -12,6 +12,7 @@
   },
   "devDependencies": {},
   "scripts": {
+    "start": "server.js",
     "dev": "nodemon server.js"
   },
   "author": "",
