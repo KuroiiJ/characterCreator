@@ -1,15 +1,10 @@
 <template>
     
-        <div class="card">
             <div class="content">
               
             <h2>Name: {{character.name}} </h2>
             <h4>Class: {{classInfo.name}} </h4>
-            <h4>Race: {{raceInfo.name}} </h4>
-          
-            
-
-        
+            <h4>Race: {{raceInfo.name}} </h4>                
       
               <div class="profiles">
                     <div class="profile"><span>{{raceInfo.speed}}</span>Movement</div>
@@ -36,7 +31,7 @@
                
 
             </div>
-        </div>
+      
 
 </template>
 
@@ -92,20 +87,7 @@ export default {
 
 
 
-.card {
-    position: sticky;
-    top: 10px;
-    height: 400px;
-    width: 300px;
-    background: #fff;
-    font-family: Roboto;
-    display: block;
-    position: relative;
-    margin: 50px auto;
-    border-radius: 5px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    transition: all 0.2s ease-in-out;
-}
+
 
 .card:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
