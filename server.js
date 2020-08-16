@@ -16,7 +16,7 @@ db.once('open', () => console.log('Connected to database!'));
 
 server.use(express.json());
 server.use(cors());
-server.use(serveStatic(__dirname + '/client/dist'));
+server.use(serveStatic(__dirname + '/dist'));
 
 
 //telling the server how to access the DB and what to do wif it
