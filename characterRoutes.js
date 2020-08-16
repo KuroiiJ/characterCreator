@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const Character = require('./characterModel')
+const path = require('path')
+const Character = require(path.join(__dirname, './characterModel'))
 
 router.get('/', async (req, res) => {
     try {
