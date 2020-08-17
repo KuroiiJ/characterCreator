@@ -33,7 +33,7 @@ export default {
   methods: {
     getCharacters: function () {
       axios
-        .get('http://localhost:3000/characterRoutes')
+        .get('https://d-and-d-character-creator.herokuapp.com//characterRoutes')
         .then(response => this.characters = response.data)
     },
     getClasses: function () {
