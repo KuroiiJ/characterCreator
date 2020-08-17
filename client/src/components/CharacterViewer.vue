@@ -32,8 +32,8 @@ export default {
 <style lang="scss">
 
 .character-viewer {
-    position: sticky;
-    top: 30px;
+   position: relative;
+    top: 50px;
 }
 
 .wrapper {
@@ -53,12 +53,20 @@ export default {
     padding: 40px;
     height: 400px;
     width: 300px;
-    background: #fff;
     font-family: Roboto;
     margin: 50px auto;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    background: 
+      linear-gradient(#add9f4 33%, rgba(173,217,244, 0)),
+      linear-gradient(rgba(173,217,244, 0), #add9f4 66%) 0 100%,
+      radial-gradient(farthest-side at 50% 0, rgba(34,34,34, 0.5), rgba(0,0,0,0)),
+      radial-gradient(farthest-side at 50% 100%, rgba(34,34,34, 0.5), rgba(0,0,0,0)) 0 100%;
+    background-color: #add9f4;
+    background-repeat: no-repeat;
+    background-attachment: local, local, scroll, scroll;
+    background-size: 100% 45px, 100% 45px, 100% 15px, 100% 15px;
   }
 
   @for $i from 1 through 80 {

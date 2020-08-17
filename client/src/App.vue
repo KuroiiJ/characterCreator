@@ -5,6 +5,8 @@
       <button v-on:click="toggle='character-viewer'; getCharacters()">View all Characters </button>
       <button v-on:click="toggle='character-creator'; getClasses(); getRaces()">Create New Character </button>
     </div> 
+
+    <br /><br /><br /><br /><br />
     
     <CharacterViewer v-show="toggle==='character-viewer'" :characters="characters"/>
     <CharacterCreator v-show="toggle==='character-creator'" :classes="classes.results" :races="races.results" />
@@ -32,9 +34,10 @@ export default {
   },
   methods: {
     //indevelopment: http://localhost:3000/characterRoutes
+    //production: https://d-and-d-character-creator.herokuapp.com//characterRoutes
     getCharacters: function () {
       axios
-        .get('https://d-and-d-character-creator.herokuapp.com//characterRoutes')
+        .get('http://localhost:3000/characterRoutes')
         .then(response => this.characters = response.data)
     },
     getClasses: function () {
@@ -72,8 +75,10 @@ body {
 
 }
 .menu {
-  position: sticky;
-  top: 30px;
+  position: fixed;
+   left: 0;
+  right: 0;
+  top: 20px;
 }
 
 #header-img {

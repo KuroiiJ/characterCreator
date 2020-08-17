@@ -40,9 +40,10 @@ export default {
   },
   methods: {
     //indevelopment: http://localhost:3000/characterRoutes
+    //productin: https://d-and-d-character-creator.herokuapp.com/characterRoutes
     postCharacter: function () {
       axios
-        .post('https://d-and-d-character-creator.herokuapp.com/characterRoutes', {
+        .post('http://localhost:3000/characterRoutes', {
           name: this.name,
           profession: this.profession,
           race: this.race
@@ -59,5 +60,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.character-creator {
+   position: relative;
+    top: 50px;
+}
 </style>
