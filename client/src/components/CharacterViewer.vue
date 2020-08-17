@@ -31,7 +31,14 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 
+.character-viewer {
+    position: sticky;
+    top: 30px;
+}
+
 .wrapper {
+  display: flex;
+  flex-flow: row wrap;
   margin-top: 50px;
   padding-top: 25px;
   padding-bottom: 1000px;
@@ -42,7 +49,7 @@ export default {
 
   .card {
     position: sticky;
-    top: 30px;
+    top: 300px;
     padding: 40px;
     height: 400px;
     width: 300px;
@@ -56,7 +63,10 @@ export default {
 
   @for $i from 1 through 80 {
   .card:nth-child(#{$i}n) {
-    top: $i * 20px;
+    left: $i * 20px;
+    left: random(200) + $i * 1px;
+    top: random(130) + $i * 1px;
+    transform: rotate(random(3) - 2 * 1deg);
   }
 }
 }

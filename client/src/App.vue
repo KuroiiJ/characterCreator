@@ -1,8 +1,10 @@
 <template>
   <div id="app" v-show=races >
-    <img alt="Maki" id="header-img" src="./assets/Maki1.jpg"><br/>
-    <button v-on:click="toggle='character-viewer'; getCharacters()">View all Characters </button>
-    <button v-on:click="toggle='character-creator'; getClasses(); getRaces()">Create New Character </button>
+    <div class="menu" >
+      <img alt="Maki" id="header-img" src="./assets/Maki1.jpg"><br/>
+      <button v-on:click="toggle='character-viewer'; getCharacters()">View all Characters </button>
+      <button v-on:click="toggle='character-creator'; getClasses(); getRaces()">Create New Character </button>
+    </div> 
     
     <CharacterViewer v-show="toggle==='character-viewer'" :characters="characters"/>
     <CharacterCreator v-show="toggle==='character-creator'" :classes="classes.results" :races="races.results" />
@@ -68,11 +70,15 @@ body {
   background: linear-gradient(#e8e8e8, #e0e0e0);
 
 }
+.menu {
+  position: sticky;
+  top: 30px;
+}
 
 #header-img {
     border-radius:50%;
     width: 7%;
-    
+
 }
 
 img:hover {
