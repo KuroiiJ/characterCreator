@@ -31,6 +31,7 @@ export default {
     }
   },
   methods: {
+    //indevelopment: http://localhost:3000/characterRoutes
     getCharacters: function () {
       axios
         .get('https://d-and-d-character-creator.herokuapp.com//characterRoutes')

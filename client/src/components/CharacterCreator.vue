@@ -39,6 +39,7 @@ export default {
     }
   },
   methods: {
+    //indevelopment: http://localhost:3000/characterRoutes
     postCharacter: function () {
       axios
         .post('https://d-and-d-character-creator.herokuapp.com/characterRoutes', {
