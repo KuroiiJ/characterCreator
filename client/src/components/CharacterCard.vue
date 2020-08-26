@@ -1,7 +1,6 @@
 <template>
     <div class="card-wrapper">
         <div class="content">
-              
           <h2>Name: {{character.name}} </h2>
           <br />  
           <h4>Class: {{classInfo.name}} </h4>

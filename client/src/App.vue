@@ -3,7 +3,7 @@
     <div class="menu" >
       
       <button v-on:click="toggle='character-viewer'; getCharacters()">View all Characters </button>
-      <img alt="Maki" id="header-img" src="./assets/Maki1.jpg">
+      <img alt="Maki" id="header-img" src="./assets/wizard.svg">
       <button v-on:click="toggle='character-creator'; getClasses(); getRaces()">Create New Character </button>
     </div> 
 
@@ -74,6 +74,22 @@ export default {
 body {
   background: #f5d9d9;
 }
+
+button {
+  padding: 10px;
+  color:darkslategray;
+  border-color: darkcyan;
+  background: paleturquoise;
+  border-radius: 5%;
+  font-size: 16pt;
+}
+
+button:hover {
+  box-shadow: 0 0 3px 4px rgba(0, 140, 186, 0.5);
+  opacity: 75%;
+}
+
+
 .menu {
   position: fixed;
   left: 0;
@@ -91,11 +107,8 @@ body {
 }
 #header-img {
     border-radius:50%;
-    width: 5%;
-    margin:20px;
-}
-img:hover {
-  box-shadow: 0 0 6px 4px rgba(0, 140, 186, 0.5);
-  opacity: 75%;
+    width: 7%;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 </style>
